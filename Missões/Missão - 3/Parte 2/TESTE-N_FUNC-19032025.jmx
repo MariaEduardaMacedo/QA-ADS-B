@@ -1,0 +1,1476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="TESTE-N_FUNC-19032025" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.${project.version}. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="sec-ch-ua" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua</stringProp>
+            <stringProp name="Header.value">&quot;Chromium&quot;;v=&quot;134&quot;, &quot;Not:A-Brand&quot;;v=&quot;24&quot;, &quot;Google Chrome&quot;;v=&quot;134&quot;</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-mobile" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+            <stringProp name="Header.value">?0</stringProp>
+          </elementProp>
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+          </elementProp>
+          <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+            <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+            <stringProp name="Header.value">1</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-platform" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+            <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">www.amazon.com.br</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">images-na.ssl-images-amazon.com</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_3" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_3</stringProp>
+            <stringProp name="Argument.value">s.amazon-adsystem.com</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager">
+        <collectionProp name="AuthManager.auth_list"/>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <longProp name="ThreadGroup.duration">0</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.com.br/s/ref=nav_bb_sb?field-keywords=Notebook" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="field-keywords" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">field-keywords</stringProp>
+                  <stringProp name="Argument.value">Notebook</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">s/ref=nav_bb_sb</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://images-na.ssl-images-amazon.com/images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://images-na.ssl-images-amazon.com/images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://s.amazon-adsystem.com/iu3?d=amazon.com.br&amp;slot=navFooter&amp;a2=01015e547a26ba2fbf9da652a1e4ee83acfba6ede8c82465a87775c9a8e439fd9d0a&amp;old_oo=0&amp;ts=1742425555976&amp;s=AcwsJBGdmfzOf2NhIYUtl5GUyTr1qvjHh8VUwHFc1UV0&amp;gdpr_consent=&amp;gdpr_consent_avl=&amp;cb=1742425555976" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="a2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">a2</stringProp>
+                  <stringProp name="Argument.value">01015e547a26ba2fbf9da652a1e4ee83acfba6ede8c82465a87775c9a8e439fd9d0a</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="old_oo" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">old_oo</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="s" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">s</stringProp>
+                  <stringProp name="Argument.value">AcwsJBGdmfzOf2NhIYUtl5GUyTr1qvjHh8VUwHFc1UV0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="d" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">d</stringProp>
+                  <stringProp name="Argument.value">amazon.com.br</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="gdpr_consent_avl" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">gdpr_consent_avl</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="gdpr_consent" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">gdpr_consent</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="slot" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">slot</stringProp>
+                  <stringProp name="Argument.value">navFooter</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ts" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ts</stringProp>
+                  <stringProp name="Argument.value">1742425555976</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="cb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">cb</stringProp>
+                  <stringProp name="Argument.value">1742425555976</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">iu3</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://s.amazon-adsystem.com/v3/pr?exlist=n-xr-HMT_n-id-HMT_n-eq-HMT3_n-ix-HMT_n-y-HMT_n-cx-HMT_n-telaria_n-dx-HMT2_imdb_n-lucid_n-samba.tv_adb_mp_af_n-sk_n-mediarithmics_n-lm-HMT3_index_n-kg-HMT_n-pm-HMT_nsln_fbca_nd_n-ym-HMT_n-ox-hmt_tbl_n-nt-HMT_ns_bsw_bk_n-dm2-HMT_gem_n-zeotap-4_fw_n-fo-HMT_n-kr-new_n-bsw-hmt_n-st-HMT1_n-fw-HMT1_n-og-HMT_adelphic_g_kr_n-comscr.com_ox_n-tl-HMT_n-semasio-ecm_n-gg-HMT2_n-g-hmt_n-ispot&amp;fv=1.0&amp;ex-pl-fbca=S1u8_8eBRjWAOqv5xBey_w&amp;a=cm&amp;ex-pl-n-kr-new=HtSv4Zb6TUOvWNL8HK31cA&amp;dmt=1&amp;gdpr_consent=&amp;ex-pl-n-g-hmt=caT5S6owQAuZ0cJ8nHbQZw&amp;ep=ttam_T219Ay-cPciHbT10p0OvxeAOF-jiGgxPFcGi-ZTsJCscFzjcdP8Kx5UCnY0ZBsMHnDY11Cu_fxiGK5_Vb4CPIf_xG4rR-_QpPTEePh6MGi8hW6LmZMIudM4dctyV4rTf4WiI1gKYZ6HKEJtEbDDmXAwRHd-VTjx4gXsJqfzthkpLu3e-LeKcgAeUt-Y685tjF66RZcKDEkNf5xX3ugURrevAalDf0FiHV6L_-ILcbUyrNfBgiIj7rVMHiO4aECkF--l2OMaGIR5HC0Sn8QDIXEr4IzMkvJ9V1SophCKzKpyk9xIasa_NjYaPFMV9Jzk6fCBXLINXj7arnuptcR9VZrWgHvnCXWG9-wBjpZMlkun6EalCF4tw8b9bB8TGUxoArKg-rYPnkx9nKfJMhFY_5qMgyNxCHbF_MUl5W_Er_RIOLnk0JeB0Eq59-WEjQ_EHL3JLQCm1xq_e9iqeB1Ext2UQHsZoMCCMYwPfgc5E1Wcfqy6V-hDhaOpjdmTWpnZJLUjTiK6ICYu-TsmRYhK5PisSBleY9rs0G0Q-rmWo-hz8TPi1I-7jVefRnkZuCXAwkdFxf1lev8BXBgoUF6e54v_Y6akYes-rYLJGTZJ3sJ6XIxmJrv0yOeHmZKmasvhwY2vS5Ruis6-UkSyMpiPQxwgcDpPIOzUe3WVjMTvZwt5mQ_6pejnB402ZztGz6Dbt3yhrEqIIIzazXt_PZeb1qxho47xHPWwR8zNVf4Fi1_PHvyol5TWM3bPIwQT9Ddgh93pgXjrQPmqNwNPFT-Y2Yx7a0DuyBFZ0vFO0oy1nNvrEpB7yYI0QLM8seahOQz8jqPH63SZDhcQ99zc9n9cmgnD3gF2Z7GZffBvZsfxLEprQgOH16S7ClzzdduPjz6bnZx9ius9SBbep12NqAK9BNjZxMiNZdofLyeDAqNPxUbSyAbHDpyKhglgoE-hmNqD2579oazj8KO5PHNERH8_roMaRS2Id7TqAHrGLSR0DFDYeEM1a3Ce2sku-JJ3UgVcGF4IWG2829U_oQRX-gNgLJTGRRuzS1YDRWCZcbIzSMVCfJDcEGvnZz3Oa9R18zTq6jj9Flo7ZjUPgKPG150SKWAgRGzv7YqHk6Bx6n4XX08kZek9D6SsLC-OoVn1YmDYQmvfIZYNKJDk4HIHHG90tKBQ6GDZe9FeCongYapJba8V_l7TPMVWILk4Scy0pJ6707OZ5iLoT58uEtWUXDRh9LMnfSbUfNcZZDwxh3Nxm16c0xfOk7CF1eDE3oczeNlwSO8Y8-yTo2WJaaz4ng" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="fv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">fv</stringProp>
+                  <stringProp name="Argument.value">1.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ex-pl-fbca" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ex-pl-fbca</stringProp>
+                  <stringProp name="Argument.value">S1u8_8eBRjWAOqv5xBey_w</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="a" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">a</stringProp>
+                  <stringProp name="Argument.value">cm</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ex-pl-n-kr-new" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ex-pl-n-kr-new</stringProp>
+                  <stringProp name="Argument.value">HtSv4Zb6TUOvWNL8HK31cA</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="exlist" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">exlist</stringProp>
+                  <stringProp name="Argument.value">n-xr-HMT_n-id-HMT_n-eq-HMT3_n-ix-HMT_n-y-HMT_n-cx-HMT_n-telaria_n-dx-HMT2_imdb_n-lucid_n-samba.tv_adb_mp_af_n-sk_n-mediarithmics_n-lm-HMT3_index_n-kg-HMT_n-pm-HMT_nsln_fbca_nd_n-ym-HMT_n-ox-hmt_tbl_n-nt-HMT_ns_bsw_bk_n-dm2-HMT_gem_n-zeotap-4_fw_n-fo-HMT_n-kr-new_n-bsw-hmt_n-st-HMT1_n-fw-HMT1_n-og-HMT_adelphic_g_kr_n-comscr.com_ox_n-tl-HMT_n-semasio-ecm_n-gg-HMT2_n-g-hmt_n-ispot</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dmt" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">dmt</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="gdpr_consent" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">gdpr_consent</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ex-pl-n-g-hmt" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ex-pl-n-g-hmt</stringProp>
+                  <stringProp name="Argument.value">caT5S6owQAuZ0cJ8nHbQZw</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ep" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ep</stringProp>
+                  <stringProp name="Argument.value">ttam_T219Ay-cPciHbT10p0OvxeAOF-jiGgxPFcGi-ZTsJCscFzjcdP8Kx5UCnY0ZBsMHnDY11Cu_fxiGK5_Vb4CPIf_xG4rR-_QpPTEePh6MGi8hW6LmZMIudM4dctyV4rTf4WiI1gKYZ6HKEJtEbDDmXAwRHd-VTjx4gXsJqfzthkpLu3e-LeKcgAeUt-Y685tjF66RZcKDEkNf5xX3ugURrevAalDf0FiHV6L_-ILcbUyrNfBgiIj7rVMHiO4aECkF--l2OMaGIR5HC0Sn8QDIXEr4IzMkvJ9V1SophCKzKpyk9xIasa_NjYaPFMV9Jzk6fCBXLINXj7arnuptcR9VZrWgHvnCXWG9-wBjpZMlkun6EalCF4tw8b9bB8TGUxoArKg-rYPnkx9nKfJMhFY_5qMgyNxCHbF_MUl5W_Er_RIOLnk0JeB0Eq59-WEjQ_EHL3JLQCm1xq_e9iqeB1Ext2UQHsZoMCCMYwPfgc5E1Wcfqy6V-hDhaOpjdmTWpnZJLUjTiK6ICYu-TsmRYhK5PisSBleY9rs0G0Q-rmWo-hz8TPi1I-7jVefRnkZuCXAwkdFxf1lev8BXBgoUF6e54v_Y6akYes-rYLJGTZJ3sJ6XIxmJrv0yOeHmZKmasvhwY2vS5Ruis6-UkSyMpiPQxwgcDpPIOzUe3WVjMTvZwt5mQ_6pejnB402ZztGz6Dbt3yhrEqIIIzazXt_PZeb1qxho47xHPWwR8zNVf4Fi1_PHvyol5TWM3bPIwQT9Ddgh93pgXjrQPmqNwNPFT-Y2Yx7a0DuyBFZ0vFO0oy1nNvrEpB7yYI0QLM8seahOQz8jqPH63SZDhcQ99zc9n9cmgnD3gF2Z7GZffBvZsfxLEprQgOH16S7ClzzdduPjz6bnZx9ius9SBbep12NqAK9BNjZxMiNZdofLyeDAqNPxUbSyAbHDpyKhglgoE-hmNqD2579oazj8KO5PHNERH8_roMaRS2Id7TqAHrGLSR0DFDYeEM1a3Ce2sku-JJ3UgVcGF4IWG2829U_oQRX-gNgLJTGRRuzS1YDRWCZcbIzSMVCfJDcEGvnZz3Oa9R18zTq6jj9Flo7ZjUPgKPG150SKWAgRGzv7YqHk6Bx6n4XX08kZek9D6SsLC-OoVn1YmDYQmvfIZYNKJDk4HIHHG90tKBQ6GDZe9FeCongYapJba8V_l7TPMVWILk4Scy0pJ6707OZ5iLoT58uEtWUXDRh9LMnfSbUfNcZZDwxh3Nxm16c0xfOk7CF1eDE3oczeNlwSO8Y8-yTo2WJaaz4ng</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">v3/pr</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.com.br/s?k=alienware%20notebook&amp;i=aps&amp;ref=nb_sb_ss_ts-doa-p_1_5&amp;crid=39NE5A1RMSX4K&amp;sprefix=Alien%2Caps%2C232" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="ref" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ref</stringProp>
+                  <stringProp name="Argument.value">nb_sb_ss_ts-doa-p_1_5</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="crid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">crid</stringProp>
+                  <stringProp name="Argument.value">39NE5A1RMSX4K</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sprefix" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sprefix</stringProp>
+                  <stringProp name="Argument.value">Alien,aps,232</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="i" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">i</stringProp>
+                  <stringProp name="Argument.value">aps</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="k" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">k</stringProp>
+                  <stringProp name="Argument.value">alienware notebook</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">s</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1440</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1440</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;19.0.0&quot;</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[6]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">7220</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://images-na.ssl-images-amazon.com/images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://images-na.ssl-images-amazon.com/images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://s.amazon-adsystem.com/iu3?d=amazon.com.br&amp;slot=navFooter&amp;a2=01015e547a26ba2fbf9da652a1e4ee83acfba6ede8c82465a87775c9a8e439fd9d0a&amp;old_oo=0&amp;ts=1742425566298&amp;s=AeCXbIOldATFj4jjWHGA_mkG_0VXjva7KGWeSnZB3kzZ&amp;gdpr_consent=&amp;gdpr_consent_avl=&amp;cb=1742425566298" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="a2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">a2</stringProp>
+                  <stringProp name="Argument.value">01015e547a26ba2fbf9da652a1e4ee83acfba6ede8c82465a87775c9a8e439fd9d0a</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="old_oo" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">old_oo</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="s" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">s</stringProp>
+                  <stringProp name="Argument.value">AeCXbIOldATFj4jjWHGA_mkG_0VXjva7KGWeSnZB3kzZ</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="d" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">d</stringProp>
+                  <stringProp name="Argument.value">amazon.com.br</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="gdpr_consent_avl" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">gdpr_consent_avl</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="gdpr_consent" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">gdpr_consent</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="slot" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">slot</stringProp>
+                  <stringProp name="Argument.value">navFooter</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ts" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ts</stringProp>
+                  <stringProp name="Argument.value">1742425566298</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="cb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">cb</stringProp>
+                  <stringProp name="Argument.value">1742425566298</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">iu3</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://s.amazon-adsystem.com/v3/pr?exlist=imdb_nsln_n-kr-new_n-sk_n-lucid_kr_bk_n-rb-HMT3_n-telaria_pm_an_adelphic&amp;fv=1.0&amp;a=cm&amp;ex-pl-n-kr-new=Vh6dvtXDSPqT2gjudrkaPQ&amp;dmt=1&amp;gdpr_consent=&amp;ep=NLmAUJwOczdiLfS7QPdybulGEdrNC1dX557PWF-yYzUx60SsKzhyL84P_2T0N9bc" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="fv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">fv</stringProp>
+                  <stringProp name="Argument.value">1.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="a" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">a</stringProp>
+                  <stringProp name="Argument.value">cm</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ex-pl-n-kr-new" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ex-pl-n-kr-new</stringProp>
+                  <stringProp name="Argument.value">Vh6dvtXDSPqT2gjudrkaPQ</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="exlist" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">exlist</stringProp>
+                  <stringProp name="Argument.value">imdb_nsln_n-kr-new_n-sk_n-lucid_kr_bk_n-rb-HMT3_n-telaria_pm_an_adelphic</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dmt" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">dmt</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="gdpr_consent" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">gdpr_consent</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ep" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ep</stringProp>
+                  <stringProp name="Argument.value">NLmAUJwOczdiLfS7QPdybulGEdrNC1dX557PWF-yYzUx60SsKzhyL84P_2T0N9bc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">v3/pr</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.com.br/Notebook-Dell-Alienware-R2-AW16-U9185H-M30P/dp/B0D8V8BZHH/ref=sr_1_5?crid=39NE5A1RMSX4K&amp;dib=eyJ2IjoiMSJ9.vVvQTtT9CRa7Xvk-6ekGZWbvyMTcozaz7uD9Ih58Lh0oJu6j4UIWLUwoENpzTaiVXWwY1S1AAErHtJ_HrjCMOsenNqKnLc7FWMEl_boujv3jB5X51YYcVIBqmupHWYswoOilRmDaUHNC9Rzb_Gapb6L4PKlh0JKxUUd025k48aYrzIJK0hXCPyzEXcLZLQ70_jNnWGd0OkYHJ5k7S3YY-xWxs6dQ2t_rbxPSOt7SQyqVthItKlYmlxK_N4sLUun10AxhnhRgoReZy7O-Tvxl-H5txQEL-2URcvDBTbKmPFu6c_mbSa_SR7eLgbj3ZbSeIuVCvESnnxU8JS8r2UlDpDx2mZvjCVCWzMpNiKFRjR5BdnM1iXfuRPoAVXCOZd46Agj-mm6mtNO6rxKkESCerJzXGzlITc54wPJNyrgeRx4e_sdD4DsVwV5hhu3Mly6_.5wYqhWh9jaJcjWSgyn0ZZfq2Xyn3e_hwVbhpnTT_WDI&amp;dib_tag=se&amp;keywords=alienware+notebook&amp;qid=1742425565&amp;sprefix=Alien%2Caps%2C232&amp;sr=8-5&amp;ufe=app_do%3Aamzn1.fos.a492fd4a-f54d-4e8d-8c31-35e0a04ce61e" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="crid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">crid</stringProp>
+                  <stringProp name="Argument.value">39NE5A1RMSX4K</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="keywords" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">keywords</stringProp>
+                  <stringProp name="Argument.value">alienware notebook</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sprefix" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sprefix</stringProp>
+                  <stringProp name="Argument.value">Alien,aps,232</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dib_tag" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">dib_tag</stringProp>
+                  <stringProp name="Argument.value">se</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ufe" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">ufe</stringProp>
+                  <stringProp name="Argument.value">app_do:amzn1.fos.a492fd4a-f54d-4e8d-8c31-35e0a04ce61e</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dib" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">dib</stringProp>
+                  <stringProp name="Argument.value">eyJ2IjoiMSJ9.vVvQTtT9CRa7Xvk-6ekGZWbvyMTcozaz7uD9Ih58Lh0oJu6j4UIWLUwoENpzTaiVXWwY1S1AAErHtJ_HrjCMOsenNqKnLc7FWMEl_boujv3jB5X51YYcVIBqmupHWYswoOilRmDaUHNC9Rzb_Gapb6L4PKlh0JKxUUd025k48aYrzIJK0hXCPyzEXcLZLQ70_jNnWGd0OkYHJ5k7S3YY-xWxs6dQ2t_rbxPSOt7SQyqVthItKlYmlxK_N4sLUun10AxhnhRgoReZy7O-Tvxl-H5txQEL-2URcvDBTbKmPFu6c_mbSa_SR7eLgbj3ZbSeIuVCvESnnxU8JS8r2UlDpDx2mZvjCVCWzMpNiKFRjR5BdnM1iXfuRPoAVXCOZd46Agj-mm6mtNO6rxKkESCerJzXGzlITc54wPJNyrgeRx4e_sdD4DsVwV5hhu3Mly6_.5wYqhWh9jaJcjWSgyn0ZZfq2Xyn3e_hwVbhpnTT_WDI</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="qid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">qid</stringProp>
+                  <stringProp name="Argument.value">1742425565</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sr" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sr</stringProp>
+                  <stringProp name="Argument.value">8-5</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">Notebook-Dell-Alienware-R2-AW16-U9185H-M30P/dp/B0D8V8BZHH/ref=sr_1_5</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1440</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1440</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;19.0.0&quot;</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[11]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">14284</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://images-na.ssl-images-amazon.com/images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://images-na.ssl-images-amazon.com/images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://s.amazon-adsystem.com/iu3?d=amazon.com.br&amp;slot=navFooter&amp;a2=01015e547a26ba2fbf9da652a1e4ee83acfba6ede8c82465a87775c9a8e439fd9d0a&amp;old_oo=0&amp;ts=1742425583059&amp;s=AXK2KCoVZu3DP8LnA-NztgpZjPq7MAPPlJZjyrA9gvCY&amp;gdpr_consent=&amp;gdpr_consent_avl=&amp;cb=1742425583059" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="a2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">a2</stringProp>
+                  <stringProp name="Argument.value">01015e547a26ba2fbf9da652a1e4ee83acfba6ede8c82465a87775c9a8e439fd9d0a</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="old_oo" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">old_oo</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="s" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">s</stringProp>
+                  <stringProp name="Argument.value">AXK2KCoVZu3DP8LnA-NztgpZjPq7MAPPlJZjyrA9gvCY</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="d" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">d</stringProp>
+                  <stringProp name="Argument.value">amazon.com.br</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="gdpr_consent_avl" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">gdpr_consent_avl</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="gdpr_consent" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">gdpr_consent</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="slot" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">slot</stringProp>
+                  <stringProp name="Argument.value">navFooter</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ts" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ts</stringProp>
+                  <stringProp name="Argument.value">1742425583059</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="cb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">cb</stringProp>
+                  <stringProp name="Argument.value">1742425583059</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">iu3</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://s.amazon-adsystem.com/v3/pr?exlist=nsln_n-kr-new_n-sk_n-lucid_bk_n-telaria_adelphic&amp;fv=1.0&amp;a=cm&amp;ex-pl-n-kr-new=Vh6dvtXDSPqT2gjudrkaPQ&amp;dmt=1&amp;gdpr_consent=" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="fv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">fv</stringProp>
+                  <stringProp name="Argument.value">1.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="a" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">a</stringProp>
+                  <stringProp name="Argument.value">cm</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ex-pl-n-kr-new" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ex-pl-n-kr-new</stringProp>
+                  <stringProp name="Argument.value">Vh6dvtXDSPqT2gjudrkaPQ</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="exlist" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">exlist</stringProp>
+                  <stringProp name="Argument.value">nsln_n-kr-new_n-sk_n-lucid_bk_n-telaria_adelphic</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dmt" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">dmt</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="gdpr_consent" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">gdpr_consent</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">v3/pr</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.com.br/cart/add-to-cart/ref=dp_start-bbf_1_glance" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="custom-name.1.3" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-name.1.3</stringProp>
+                  <stringProp name="Argument.value">itemAssocType</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="custom-name.1.2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-name.1.2</stringProp>
+                  <stringProp name="Argument.value">UNIQ-itemAssoc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="custom-name.1.1" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-name.1.1</stringProp>
+                  <stringProp name="Argument.value">itemAssoc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="storeID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">storeID</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="items[0.warranty][additionalParameters][itemAssociation][quantityConstraint][invarianceFactor]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">items[0.warranty][additionalParameters][itemAssociation][quantityConstraint][invarianceFactor]</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="submit.add-to-cart" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">submit.add-to-cart</stringProp>
+                  <stringProp name="Argument.value">Adicionar ao carrinho</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="custom-value.1.1" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-value.1.1</stringProp>
+                  <stringProp name="Argument.value">a14ae987-0853-4c3d-b6b6-75ac7a4078bc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="items[0.warranty][offerListingId]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">items[0.warranty][offerListingId]</stringProp>
+                  <stringProp name="Argument.value">BhRn5wM90chw1wAm0t4VIClNXlQPYiVnwP%2BIU0C9%2BKn%2BPk51chL0ihta0r8OIUk6qtY0THYAKvbWWH0Ywjg2KPns%2F3T5apf9yY59UL7vS3t1RM9kv4pPBNj1BOkTyauFoe7VYKNH57MPwBp9E5FhQVUSmFX4%2BXJ%2BSNq94Op1ZTpzTw2zNFcNbnOT%2FXSQXIr6</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="custom-value.1.2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-value.1.2</stringProp>
+                  <stringProp name="Argument.value">a14ae987-0853-4c3d-b6b6-75ac7a4078bc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="custom-value.1.3" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-value.1.3</stringProp>
+                  <stringProp name="Argument.value">AmazonProtect</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dropdown-selection" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">dropdown-selection</stringProp>
+                  <stringProp name="Argument.value">add-new</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="nodeID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">nodeID</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="items[0.base][quantity]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">items[0.base][quantity]</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="tagActionCode" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">tagActionCode</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ctaPageType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">ctaPageType</stringProp>
+                  <stringProp name="Argument.value">detail</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="items[0.warranty][additionalParameters][itemAssociation][quantityConstraint][quantityEditable]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">items[0.warranty][additionalParameters][itemAssociation][quantityConstraint][quantityEditable]</stringProp>
+                  <stringProp name="Argument.value">false</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="rsid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">rsid</stringProp>
+                  <stringProp name="Argument.value">135-0300324-3714736</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="pageLoadTimestampUTC" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">pageLoadTimestampUTC</stringProp>
+                  <stringProp name="Argument.value">2025-03-19T23:06:22.067447457Z</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="isMerchantExclusive" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">isMerchantExclusive</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="items[0.base][offerListingId]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">items[0.base][offerListingId]</stringProp>
+                  <stringProp name="Argument.value">XbfI0PbTVyuLT%2BO7SCifzFBCXDXhUQRqWxT9f4kiSLhv1Ec4X%2Bde3o3uxEJ2dpv7GL3oJYCEPA%2B%2BUfHLf66EMc2JQOyCfB2TwXN1D81NTfJ%2FYkNn9LtDhlg0Qrc76F7DDQHlWRF%2BJz9KG%2BJMxUAsUVuV99XueF4yCj2AVha0h2G1TtuLgsm26Lx74N4aXrCv</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sourceCustomerOrgListItemID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sourceCustomerOrgListItemID</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="offeringID.3" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">offeringID.3</stringProp>
+                  <stringProp name="Argument.value">BhRn5wM90chw1wAm0t4VIClNXlQPYiVnwP%2BIU0C9%2BKn%2BPk51chL0ihta0r8OIUk6qtY0THYAKvbWWH0Ywjg2KPns%2F3T5apf9yY59UL7vS3t1RM9kv4pPBNj1BOkTyauFoe7VYKNH57MPwBp9E5FhQVUSmFX4%2BXJ%2BSNq94Op1ZTpzTw2zNFcNbnOT%2FXSQXIr6</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="offerListingID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">offerListingID</stringProp>
+                  <stringProp name="Argument.value">XbfI0PbTVyuLT%2BO7SCifzFBCXDXhUQRqWxT9f4kiSLhv1Ec4X%2Bde3o3uxEJ2dpv7GL3oJYCEPA%2B%2BUfHLf66EMc2JQOyCfB2TwXN1D81NTfJ%2FYkNn9LtDhlg0Qrc76F7DDQHlWRF%2BJz9KG%2BJMxUAsUVuV99XueF4yCj2AVha0h2G1TtuLgsm26Lx74N4aXrCv</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="session-id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">session-id</stringProp>
+                  <stringProp name="Argument.value">135-0300324-3714736</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="clientName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">clientName</stringProp>
+                  <stringProp name="Argument.value">OffersX_OfferDisplay_DetailPage</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ASIN" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">ASIN</stringProp>
+                  <stringProp name="Argument.value">B0D8V8BZHH</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="items[0.warranty][additionalParameters][itemAssociation][renderType]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">items[0.warranty][additionalParameters][itemAssociation][renderType]</stringProp>
+                  <stringProp name="Argument.value">renderAll</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="qid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">qid</stringProp>
+                  <stringProp name="Argument.value">1742425565</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="anti-csrftoken-a2z" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">anti-csrftoken-a2z</stringProp>
+                  <stringProp name="Argument.value">hASHlNdGuRrLYTxC2RHMC3xyR0jAKSWgvpNg5UeYnr4JAAAAAGfbTe45MDM5ZjJmMi1kOWUwLTRkODAtYjcxMi0zMjU4NTg1YWNhNDU=,hJAEFmoFBoPZk7Zq49LAjl/RTXZIDwjVult+oqfNT+oQAAAAAGfbTe45MDM5ZjJmMi1kOWUwLTRkODAtYjcxMi0zMjU4NTg1YWNhNDU=</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sellingCustomerID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sellingCustomerID</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="asin.3" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">asin.3</stringProp>
+                  <stringProp name="Argument.value">B0DGLWKQ1G</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dropdown-selection-ubb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">dropdown-selection-ubb</stringProp>
+                  <stringProp name="Argument.value">add-new</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="items[0.warranty][asin]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">items[0.warranty][asin]</stringProp>
+                  <stringProp name="Argument.value">B0DGLWKQ1G</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sourceCustomerOrgListID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sourceCustomerOrgListID</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="viewID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">viewID</stringProp>
+                  <stringProp name="Argument.value">glance</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ctaDeviceType" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">ctaDeviceType</stringProp>
+                  <stringProp name="Argument.value">desktop</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="custom-value.4.1" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-value.4.1</stringProp>
+                  <stringProp name="Argument.value">a14ae987-0853-4c3d-b6b6-75ac7a4078bc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="custom-value.4.2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-value.4.2</stringProp>
+                  <stringProp name="Argument.value">a14ae987-0853-4c3d-b6b6-75ac7a4078bc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="useABBHandler" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">useABBHandler</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="asin.1" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">asin.1</stringProp>
+                  <stringProp name="Argument.value">B0DGLWKQ1G</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="asin.2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">asin.2</stringProp>
+                  <stringProp name="Argument.value">B0DXWK3312</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="custom-name.4.4" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-name.4.4</stringProp>
+                  <stringProp name="Argument.value">itemAssocRenderType</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="isAddon" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">isAddon</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="custom-name.4.3" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-name.4.3</stringProp>
+                  <stringProp name="Argument.value">itemAssocType</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="custom-name.4.2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-name.4.2</stringProp>
+                  <stringProp name="Argument.value">UNIQ-lnkdWrrnty</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="custom-name.4.1" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-name.4.1</stringProp>
+                  <stringProp name="Argument.value">itemAssoc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="sr" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sr</stringProp>
+                  <stringProp name="Argument.value">8-5</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="usePrimeHandler" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">usePrimeHandler</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="quantity" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">quantity</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="strikethroughAsin.1" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">strikethroughAsin.1</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="smokeTestEnabled" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">smokeTestEnabled</stringProp>
+                  <stringProp name="Argument.value">false</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="custom-value.4.3" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-value.4.3</stringProp>
+                  <stringProp name="Argument.value">AmazonProtect</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="custom-value.4.4" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">custom-value.4.4</stringProp>
+                  <stringProp name="Argument.value">renderAll</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="items[0.warranty][additionalParameters][itemAssociation][programType]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">items[0.warranty][additionalParameters][itemAssociation][programType]</stringProp>
+                  <stringProp name="Argument.value">AmazonProtect</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="strikethroughAsin.2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">strikethroughAsin.2</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="items[0.warranty][quantity]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">items[0.warranty][quantity]</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="quantity.2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">quantity.2</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="itemCount" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">itemCount</stringProp>
+                  <stringProp name="Argument.value">3</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="quantity.1" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">quantity.1</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="items[0.base][asin]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">items[0.base][asin]</stringProp>
+                  <stringProp name="Argument.value">B0D8V8BZHH</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="quantity.3" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">quantity.3</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="merchantID" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">merchantID</stringProp>
+                  <stringProp name="Argument.value">A2756Y90WFCLVI</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="items[0.warranty][additionalParameters][itemAssociation][associatedItemId]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">items[0.warranty][additionalParameters][itemAssociation][associatedItemId]</stringProp>
+                  <stringProp name="Argument.value">B0D8V8BZHH</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="items[0.warranty][additionalParameters][itemAssociation][deleteConstraint][mutuallyInclusive]" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">items[0.warranty][additionalParameters][itemAssociation][deleteConstraint][mutuallyInclusive]</stringProp>
+                  <stringProp name="Argument.value">false</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="rebateId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">rebateId</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="wlPopCommand" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">wlPopCommand</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">cart/add-to-cart/ref=dp_start-bbf_1_glance</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1440</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1440</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;19.0.0&quot;</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[16]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">39521</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://images-na.ssl-images-amazon.com/images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">images/S/apesafeframe/ape/sf/desktop/sf-1.50.17dc75fd.html</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://s.amazon-adsystem.com/iu3?d=amazon.com.br&amp;slot=navFooter&amp;a2=01015e547a26ba2fbf9da652a1e4ee83acfba6ede8c82465a87775c9a8e439fd9d0a&amp;old_oo=0&amp;ts=1742425624099&amp;s=AQowln29SHtebCWMFoQr0nKgiQckVHytHS7VtqSl8YPf&amp;gdpr_consent=&amp;gdpr_consent_avl=&amp;cb=1742425624099" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="a2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">a2</stringProp>
+                  <stringProp name="Argument.value">01015e547a26ba2fbf9da652a1e4ee83acfba6ede8c82465a87775c9a8e439fd9d0a</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="old_oo" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">old_oo</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="s" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">s</stringProp>
+                  <stringProp name="Argument.value">AQowln29SHtebCWMFoQr0nKgiQckVHytHS7VtqSl8YPf</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="d" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">d</stringProp>
+                  <stringProp name="Argument.value">amazon.com.br</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="gdpr_consent_avl" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">gdpr_consent_avl</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="gdpr_consent" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">gdpr_consent</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="slot" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">slot</stringProp>
+                  <stringProp name="Argument.value">navFooter</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ts" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ts</stringProp>
+                  <stringProp name="Argument.value">1742425624099</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="cb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">cb</stringProp>
+                  <stringProp name="Argument.value">1742425624099</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">iu3</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://s.amazon-adsystem.com/v3/pr?exlist=bk_nsln_n-telaria_n-sk_adelphic_n-lucid&amp;fv=1.0&amp;a=cm&amp;dmt=1&amp;gdpr_consent=" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="fv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">fv</stringProp>
+                  <stringProp name="Argument.value">1.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="a" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">a</stringProp>
+                  <stringProp name="Argument.value">cm</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="exlist" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">exlist</stringProp>
+                  <stringProp name="Argument.value">bk_nsln_n-telaria_n-sk_adelphic_n-lucid</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="dmt" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">dmt</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="gdpr_consent" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">gdpr_consent</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">v3/pr</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.amazon.com.br/gp/cart/desktop/go-to-checkout.html/ref=ox_sw_proceed?tangoWeblabStatus=tango_non_prime_C&amp;proceedToCheckout=1&amp;oldCustomerId=0" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="proceedToCheckout" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">proceedToCheckout</stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="tangoWeblabStatus" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">tangoWeblabStatus</stringProp>
+                  <stringProp name="Argument.value">tango_non_prime_C</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="oldCustomerId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">oldCustomerId</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">gp/cart/desktop/go-to-checkout.html/ref=ox_sw_proceed</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="device-memory" elementType="Header">
+                  <stringProp name="Header.name">device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-device-memory" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-device-memory</stringProp>
+                  <stringProp name="Header.value">8</stringProp>
+                </elementProp>
+                <elementProp name="dpr" elementType="Header">
+                  <stringProp name="Header.name">dpr</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-dpr" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-dpr</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="viewport-width" elementType="Header">
+                  <stringProp name="Header.name">viewport-width</stringProp>
+                  <stringProp name="Header.value">1440</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-viewport-width" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-viewport-width</stringProp>
+                  <stringProp name="Header.value">1440</stringProp>
+                </elementProp>
+                <elementProp name="rtt" elementType="Header">
+                  <stringProp name="Header.name">rtt</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="downlink" elementType="Header">
+                  <stringProp name="Header.name">downlink</stringProp>
+                  <stringProp name="Header.value">10</stringProp>
+                </elementProp>
+                <elementProp name="ect" elementType="Header">
+                  <stringProp name="Header.name">ect</stringProp>
+                  <stringProp name="Header.value">4g</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform-version" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform-version</stringProp>
+                  <stringProp name="Header.value">&quot;19.0.0&quot;</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[20]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">4273</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
