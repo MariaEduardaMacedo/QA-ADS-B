@@ -1,0 +1,54 @@
+o arquivo "test_calculadora.py" apresentava os seguintes erros
+erros corrigidos no arquivo Missão -2\resolução\Calculadora\test_calculadora.py
+
+======================================= test session starts ========================================
+platform linux -- Python 3.11.11, pytest-8.3.5, pluggy-1.5.0
+rootdir: /content
+plugins: typeguard-4.4.2, anyio-3.7.1, langsmith-0.3.13
+collected 6 items                                                                                  
+
+test_calculadora.py FFFF..                                                                   [100%]
+
+============================================= FAILURES =============================================
+____________________________________________ test_soma _____________________________________________
+
+    def test_soma():
+        # Testa a operação de soma
+>       assert calculadora('soma', 2, 3) == 10
+E       AssertionError: assert 5 == 10
+E        +  where 5 = calculadora('soma', 2, 3)
+
+test_calculadora.py:6: AssertionError
+__________________________________________ test_subtração __________________________________________
+
+    def test_subtração():
+        # Testa a operação de subtração
+>       assert calculadora('subtracao', 5, 3) == 6
+E       AssertionError: assert 2 == 6
+E        +  where 2 = calculadora('subtracao', 5, 3)
+
+test_calculadora.py:12: AssertionError
+________________________________________ test_multiplicacao ________________________________________
+
+    def test_multiplicacao():
+        # Testa a operação de multiplicação
+>       assert calculadora('multiplicacao', 3, 4) == 14
+E       AssertionError: assert 12 == 14
+E        +  where 12 = calculadora('multiplicacao', 3, 4)
+
+test_calculadora.py:18: AssertionError
+___________________________________________ test_dividir ___________________________________________
+
+    def test_dividir():
+        # Testa a operação de divisão
+>       assert calculadora('divisao', 10, 2) == 6
+E       AssertionError: assert 5.0 == 6
+E        +  where 5.0 = calculadora('divisao', 10, 2)
+
+test_calculadora.py:24: AssertionError
+===================================== short test summary info ======================================
+FAILED test_calculadora.py::test_soma - AssertionError: assert 5 == 10
+FAILED test_calculadora.py::test_subtração - AssertionError: assert 2 == 6
+FAILED test_calculadora.py::test_multiplicacao - AssertionError: assert 12 == 14
+FAILED test_calculadora.py::test_dividir - AssertionError: assert 5.0 == 6
+=================================== 4 failed, 2 passed in 0.11s ====================================
