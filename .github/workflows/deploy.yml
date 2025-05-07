@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt || true  # ignora erro se arquivo não existir
+          pip install -r requirements.txt || true  # Ignora erro se o arquivo não existir
           pip install setuptools wheel pytest
 
       - name: Run tests
@@ -32,7 +32,7 @@ jobs:
           python setup.py sdist bdist_wheel
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: godot_player_package
           path: dist/
